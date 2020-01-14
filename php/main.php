@@ -1,24 +1,14 @@
-<!DOCTYPE html>
 <?php
-  include "Account.php";
-  include "Car.php"
-?>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <h1>POO con PHP</h1>
+  require_once("Car.php");
+  require_once("UberX.php");
+  require_once("Driver.php");
+  require_once("user.php");
+  require_once("UberPool.php");
+  require_once("Account.php");
 
-  <?php
-    $car = new Car("XCSJS", new Account("Angel Barrios", "18419539"));
-    $car->passanger(4);
-    echo("<p>");
-      $car->printDataCar();
-    echo("</p>");
-  ?>
-</body>
-</html>
+ 
+  $driver = new Driver(new Account("Vero San", "18328382"), "04144125236", "as737dd7878 |");
+  $driver->printDataDriver();
+  
+  $user = new User(new Account("Veronica Sanchez", "1834382"), "04144345236 ");
+  $user->printDataUser();
